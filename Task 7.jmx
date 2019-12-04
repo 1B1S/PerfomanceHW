@@ -1419,7 +1419,7 @@
           </HTTPSamplerProxy>
           <hashTree>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config EditorAccounts" enabled="true">
-              <stringProp name="filename">C:/Users/Hennadii_Afanasiev/Desktop/Help materials/Courses/Perfomance/Soft/HomeWork 7/accounts editor.csv</stringProp>
+              <stringProp name="filename">../HomeWork 7/accounts editor.csv</stringProp>
               <stringProp name="fileEncoding"></stringProp>
               <stringProp name="variableNames">USERNAME,PASSWORD</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -1524,10 +1524,6 @@
               </RegexExtractor>
               <hashTree/>
             </hashTree>
-            <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="false">
-              <stringProp name="WhileController.condition">${__javaScript(&quot;${RANDOM_POST}&quot; == &quot;NOT_FOUND&quot;,)}</stringProp>
-            </WhileController>
-            <hashTree/>
             <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
@@ -2216,7 +2212,7 @@
                 <hashTree/>
               </hashTree>
               <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
-                <stringProp name="WhileController.condition">${__groovy(vars.get(&quot;FIRST_POST&quot;).toInteger() == 100)}</stringProp>
+                <stringProp name="WhileController.condition">${__groovy(vars.get(&quot;FIRST_POST&quot;) == &quot;NOT_FOUND&quot;)}</stringProp>
               </WhileController>
               <hashTree>
                 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST Calendar request" enabled="true">
